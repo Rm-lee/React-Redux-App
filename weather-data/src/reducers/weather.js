@@ -7,7 +7,6 @@ import {
 const initialState = {
  isLoading: false,
  weatherData: [], 
- 
  error: null
 }
 

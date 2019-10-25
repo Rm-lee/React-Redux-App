@@ -1,12 +1,14 @@
 import { 
  GET_LOCATION_START,
  GET_LOCATION_SUCCESS,
- GET_LOCATION_ERROR
+ GET_LOCATION_ERROR,
+ GET_WEATHER_DATA
 } from "../actions/weather"
 
 const initialState = {
  isLoading: false,
- weatherData: null,
+ weatherData: [], 
+ 
  error: null
 }
 
@@ -20,7 +22,7 @@ export function reducer(state = initialState,action) {
    case GET_LOCATION_SUCCESS:
     return{
      ...state,
-     weatherData: action.payload,
+     weatherData: state.weatherData.concat(action.payload),
      isLoading: false
     }
 
@@ -30,6 +32,7 @@ export function reducer(state = initialState,action) {
      error: action.payload,
      isLoading: false
     }
+   
    default:
     return state
  }

@@ -1,8 +1,7 @@
 import { 
  GET_LOCATION_START,
  GET_LOCATION_SUCCESS,
- GET_LOCATION_ERROR,
- GET_WEATHER_DATA
+ GET_LOCATION_ERROR
 } from "../actions/weather"
 
 const initialState = {

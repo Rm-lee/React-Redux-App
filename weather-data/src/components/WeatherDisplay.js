@@ -1,8 +1,8 @@
-import React, {useEffect}from 'react';
+import React from 'react';
 import {connect} from "react-redux"
 import Location from "./Location"
 import {getLocation} from "../actions/weather"
-import axios from 'axios';
+
 
 
 function WeatherDisplay(props){
@@ -10,13 +10,12 @@ function WeatherDisplay(props){
  function currentLocale(){
  props.getLocation()
 }
- console.log(props)
  return (
   <div className="weather-display">
    <p className="get-location">Get Current Location weather</p>
    <button className="btn" onClick={currentLocale}>Get Weather</button>
 
-   {props.weatherData && props.weatherData.map(place => <Location location={place}  />
+   {props.weatherData && props.weatherData.map(place => <Location key={place.woeid} location={place}  />
   
    )}
   </div>

@@ -4,7 +4,7 @@ import axios from "axios";
 export const GET_LOCATION_START = "GET_LOCATION_START";
 export const GET_LOCATION_SUCCESS = "GET_LOCATION_SUCCESS";
 export const GET_LOCATION_ERROR = "GET_LOCATION_ERROR";
-export const GET_WEATHER_DATA = "GET_WEATHER_DATA";
+
 
 
 export function getLocation() {

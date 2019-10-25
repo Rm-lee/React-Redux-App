@@ -2,7 +2,6 @@ import React from 'react';
 
 function Location(props) {
 
- console.log(props.location)
  return (
   <div className="location-weather">
    <h2>{props.location.title}</h2>
